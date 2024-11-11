@@ -1,0 +1,47 @@
+html
+   <!DOCTYPE html>
+   <html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Mi Página Web</title>
+       <style>
+           body {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               margin: 0;
+               font-family: Arial, sans-serif;
+               background-color: #f0f0f0;
+           }
+           #contador {
+               text-align: center;
+               background-color: #fff;
+               padding: 20px;
+               border-radius: 8px;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+           }
+           h1 {
+               color: #333;
+           }
+           p {
+               font-size: 1.2em;
+               color: #555;
+           }
+       </style>
+   </head>
+   <body>
+       <div id="contador">
+           <h1>Contador de Clics</h1>
+           <p>Clics en la pantalla: <span id="numeroClics">0</span></p>
+       </div>
+       <script>
+           let contadorClics = 0;
+           document.addEventListener('click', function() {
+               contadorClics++;
+               document.getElementById('numeroClics').textContent = contadorClics;
+           });
+       </script>
+   </body>
+   </html>
